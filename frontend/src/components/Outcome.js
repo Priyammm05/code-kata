@@ -1,6 +1,6 @@
 import React from "react";
 
-const Outcome = () => {
+const Outcome = ({ approved }) => {
     return (
         <div className="p-1">
             <head>
@@ -16,7 +16,7 @@ const Outcome = () => {
                 <h1 className="text-8xl font-bold">Final Outcome</h1>
 
                 <p className="text-4xl">
-                    You have been approved for a business loan!
+                    You have been {approved} for a business loan!
                 </p>
             </main>
         </div>
