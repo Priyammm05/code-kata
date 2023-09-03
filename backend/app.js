@@ -135,11 +135,11 @@ app.get("/balance-sheet/:businessId", async (req, res) => {
 
 app.post("/submitApplication", async (req, res) => {
     try {
-        const { businessId, loanAmount } = req.body;
+        const { id, loanAmount } = req.body;
 
         const tokenId = "6443ab5d6f7e89d2d4018eb0";
-        const business = await Business.findById(businessId);
-        console.log(businessId);
+        const business = await Business.findById(id);
+        console.log(id);
 
         let preAssessment = 20;
         const profit12Months = business.balanceSheet
